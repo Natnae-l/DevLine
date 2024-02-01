@@ -5,6 +5,9 @@ const socketIo = require('socket.io')
 // create express app
 const app = express();
 
+// serve static files
+app.use(express.static('public'))
+
 // create http server
 const httpServer = http.createServer(app);
 

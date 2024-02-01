@@ -10,5 +10,13 @@
     <section class="name"></section>
     <section class="room"></section>
     <section class="flow"></section>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      const socket = io('http://localhost:3000');
+      socket.on('connect', () => {
+        console.log('connected')
+      })
+    </script>
 </body>
 </html>
