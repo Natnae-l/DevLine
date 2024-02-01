@@ -1,0 +1,23 @@
+body {
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+body * {
+    box-sizing: border-box;
+}
+.name {
+    flex: 1;
+    background-color: rgb(43, 43, 43);
+}
+.room {
+    flex: 3;
+    background-color: rgb(80, 79, 79);
+}
+.flow {
+    flex: 6;
+    border: 1px solid rgb(193, 34, 34);
+}
