@@ -11,14 +11,14 @@
 <h2>## Getting Started</h2>
 <p>To begin using DevLine, simply log in with your company credentials. From there, navigate to the specific rooms for your role, join conversations, and start collaborating!</p>
 
-    <h2>## Tech Stack</h2>
-    <p>DevLine leverages modern technologies to ensure a seamless and efficient communication experience. The platform is built using:</p>
-    <ul>
-        <li>Frontend: [React, Redux]</li>
-        <li>Backend: [Node.js, Express]</li>
-        <li>Database: [MongoDB]</li>
-        <li>Deployment: [AWS, Docker]</li>  
-    </ul>
+<h2>## Tech Stack</h2>
+<p>DevLine leverages modern technologies to ensure a seamless and efficient communication experience. The platform is built using:</p>
+<ul>
+    <li>Frontend: [React, Redux]</li>
+    <li>Backend: [Node.js, Express]</li>
+    <li>Database: [MongoDB]</li>
+    <li>Deployment: [AWS, Docker]</li>  
+</ul>
 <h2>## Contributing</h2>
 <p>We encourage and value contributions from our development community. If you have ideas for feature improvements, bug fixes, or general enhancements, feel free to submit a pull request!</p>
 <h2>## Support and Feedback</h2>
