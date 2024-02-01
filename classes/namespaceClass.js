@@ -1,9 +1,9 @@
-class Namespace{
+class Namespace {
     constructor(id, nsTitle, img, endPoint){
-        this.id,
-        this.nsTitle,
-        this.img,
-        this.endPoint,
+        this.id = id
+        this.nsTitle = nsTitle
+        this.img = img
+        this.endPoint
         this.rooms = []
     }
 
@@ -12,4 +12,4 @@ class Namespace{
     }
 }
 
-exports.default =  Namespace;
+module.exports =  Namespace;

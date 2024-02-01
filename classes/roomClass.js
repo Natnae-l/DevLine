@@ -1,9 +1,9 @@
 class Room {
     constructor(roomId, roomTitle, namespace, privateRoom = false){
-        this.roomId,
-        this.roomTitle,
-        this.namespace,
-        this.privateRoom,
+        this.roomId = roomId
+        this.roomTitle = roomTitle
+        this.namespace = namespace
+        this.privateRoom = privateRoom
         this.history = []
     }
 
@@ -15,4 +15,4 @@ class Room {
     }
 }
 
-exports.default =  Class;
+module.exports =  Room;

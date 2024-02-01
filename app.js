@@ -5,6 +5,10 @@ const socketIo = require('socket.io')
 // create express app
 const app = express();
 
+// add namespaces
+let namespaces = require('./data/namespaces');
+console.log(namespaces)
+
 // serve static files
 app.use(express.static('public'))
 
