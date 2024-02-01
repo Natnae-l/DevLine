@@ -12,8 +12,7 @@
 <p>To begin using DevLine, simply log in with your company credentials. From there, navigate to the specific rooms for your role, join conversations, and start collaborating!</p>
 
     <h2>## Tech Stack</h2>
-    <p>
-        DevLine leverages modern technologies to ensure a seamless and efficient communication experience. The platform is built using:</p>
+    <p>DevLine leverages modern technologies to ensure a seamless and efficient communication experience. The platform is built using:</p>
     <ul>
         <li>Frontend: [React, Redux]</li>
         <li>Backend: [Node.js, Express]</li>
