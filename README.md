@@ -22,5 +22,5 @@
 <h2>## Contributing</h2>
 <p>We encourage and value contributions from our development community. If you have ideas for feature improvements, bug fixes, or general enhancements, feel free to submit a pull request!</p>
 <h2>## Support and Feedback</h2>
-<p>If you encounter any issues or have suggestions for improving the platform, please don't hesitate to contact our support team or participate in our feedback channels.</p>
+<p>If you encounter any issues or have suggestions for improving the platform, please don't hesitate to contact me.</p>
 <p>We hope DevLine will enhance your communication and collaboration experiences within our development community. Happy connecting!</p>
