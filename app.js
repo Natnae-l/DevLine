@@ -35,11 +35,19 @@ io.on('connection', (socket) => {
 //     img: '/images/coding.png',
 //     rooms: [ [Room], [Room], [Room] ]
 //   }
+// Room {
+//     roomId: 3,
+//     roomTitle: 'Reach Out',
+//     namespace: 'developer',
+//     privateRoom: false,
+//     history: []
+//   }
 
 // listen for each namespace connection
 namespaces.forEach(namespace => {
     io.of(`/${namespace.nsTitle}`).on('connection', (socket) => {
-        console.log(socket.id)
+        let roomData = namespaces.find(data => namespace.nsTitle == data.nsTitle)
+        socket.emit('data', roomData.rooms)
     })
 })
 

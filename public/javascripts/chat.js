@@ -17,5 +17,19 @@ function connectNamespace(event){
 
     ns.on('data', (data) => {
         console.log(data)
+        room(data)
     })
+}
+
+
+function room(data){
+    document.querySelector('.room').innerHTML = '';
+    const ul = document.createElement('ul');
+    
+
+    data.forEach(item => {
+        ul.innerHTML += `<li><img src="/images/room.png" style="width: 22px;"></li>`
+    })
+    document.querySelector('.room').append(ul);
+    return;
 }
