@@ -7,7 +7,6 @@ const app = express();
 
 // add namespaces
 let namespaces = require('./data/namespaces');
-console.log(namespaces)
 
 // serve static files
 app.use(express.static('public'))
@@ -17,5 +16,33 @@ const httpServer = http.createServer(app);
 
 // create a socket.io instance
 const io = socketIo(httpServer);
+
+io.on('connection', (socket) => {
+    let data = namespaces.map(ns => {
+        return (
+            {
+                nsTitle: ns.nsTitle, img: ns.img
+            }
+        )
+    })
+
+    socket.emit('namespace', data)
+})
+
+// Namespace {
+//     id: 1,
+//     nsTitle: 'DEVS',
+//     img: '/images/coding.png',
+//     rooms: [ [Room], [Room], [Room] ]
+//   }
+
+// listen for each namespace connection
+namespaces.forEach(namespace => {
+    io.of(`/${namespace.nsTitle}`).on('connection', (socket) => {
+        console.log(socket.id)
+    })
+})
+
+
 
 httpServer.listen(3000, console.log('app listening on port 3000'));

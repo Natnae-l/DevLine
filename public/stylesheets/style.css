@@ -8,6 +8,8 @@ body {
 }
 body * {
     box-sizing: border-box;
+    color: white;
+    font-family: Poppins, sans-serif;
 }
 .name {
     flex: 1;
@@ -19,4 +21,17 @@ body * {
 }
 .flow {
     flex: 6;
+}
+ul {
+    list-style: none;
+    width: 100%;
+    padding-inline: 10px;
+}
+ul li {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 4px;
+    margin-block: 12px;
+    font-size: .9rem;
 }

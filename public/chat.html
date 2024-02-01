@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevLine</title>
     <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
 </head>
 <body>
     <section class="name"></section>
     <section class="room"></section>
     <section class="flow"></section>
+ 
 
     <script src="/socket.io/socket.io.js"></script>
+    <script src="/javascripts/chat.js"></script>
     <script>
       const socket = io('http://localhost:3000');
       socket.on('connect', () => {
-        console.log('connected')
+        socket.on('namespace', data => {
+          name(data)
+        })
       })
     </script>
 </body>

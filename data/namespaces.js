@@ -4,9 +4,9 @@ const Room = require('../classes/roomClass');
 const storeNamespaces = [];
 
 // create namespaces
-const developer = new Namespace(1, 'DEVS', '/images/coding.png', 'DEVS');
+const developer = new Namespace(1, 'DEVS', "/images/coding.png", 'DEVS');
 const test = new Namespace(2, 'TEST', '/images/test.png', 'TEST');
-const production = new Namespace(3, 'PRODUCTION', 'images/direction.png','PRODUCTION');
+const production = new Namespace(3, 'PRODUCTION', '/images/direction.png','PRODUCTION');
 
 // create rooms and store in namespaces
     // developer rooms
