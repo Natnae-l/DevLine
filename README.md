@@ -5,7 +5,7 @@
 <ul>
     <li><span><b>Customized Namespace: </b></span>The platform offers a custom namespace, ensuring that discussions and communications remain focused within the organization's development environment.</li>
     <li><span><b>Role-based Rooms: </b></span>With designated rooms for developers, testers, and the production team, the platform facilitates targeted and efficient communication among specific team members.</li>
-    <li><span><b>Real-time Messaging: </b></span>Enjoy real-time communication and collaboration with teammates, enabling swift decision-making and the exchange of ideas.</li>
+    <li><span><b>Real-time Messaging: </b></span>Enjoy real-time communication and collaboration with teammates, enabling swift decision-making and the exchange of ideas</li>
     <li><span><b>Message History: </b></span>Easily access message history and previous discussions, ensuring transparency and referenceability within teams and projects.</li>
 </ul>
 <h2>## Getting Started</h2>
