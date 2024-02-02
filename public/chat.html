@@ -11,8 +11,32 @@
 </head>
 <body>
     <section class="name"></section>
-    <section class="room"></section>
-    <section class="flow"></section>
+    <section class="room">
+      <h2>Rooms</h2>
+      <section class="inner-room"></section>
+    </section>
+    <section class="flow">
+      <div>
+        <section class="profile">
+        <div>
+          <h3>Current Room</h3>
+          <span>Users <img src="/images/user.png" alt=""></span>
+        </div>
+        <form action="">
+          <input type="search" placeholder="search">
+        </form>
+      </section>
+      <ul>
+        <li>message</li>
+        <li>message</li>
+      </ul>
+      </div>
+      
+      <form action="" class="send-message">
+        <input type="text">
+        <button>send</button>
+      </form>
+    </section>
  
 
     <script src="/socket.io/socket.io.js"></script>

@@ -12,20 +12,51 @@ body * {
     font-family: Poppins, sans-serif;
 }
 .name {
-    flex: 1;
+    flex: 1.6;
     background-color: rgb(43, 43, 43);
 }
 .room {
     flex: 3;
     background-color: rgb(80, 79, 79);
 }
+.room h2 {
+    text-align: start;
+    padding-inline: 20px;
+    margin: 0;
+}
 .flow {
     flex: 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    margin-inline: 2rem;
+}
+.flow * {
+    color: black !important;
+}
+.profile {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 2rem;
+    align-items: center;
+    width: 100% !important;
+}
+.profile div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.profile img {
+    width: 10px;
+}
+.flow span {
+    font-size: 0.8rem;
 }
 ul {
     list-style: none;
     width: 100%;
-    padding-inline: 10px;
+    padding-inline: 20px;
 }
 ul li {
     display: flex;
@@ -34,4 +65,21 @@ ul li {
     gap: 4px;
     margin-block: 12px;
     font-size: .9rem;
+}
+
+.send-message {
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+}
+.send-message input {
+    width: 60%;
+    border: 1.5px solid rgb(80, 79, 79);
+    border-radius: .3rem;
+}
+.send-message button {
+    background-color: rgb(80, 79, 79);
+    color: white !important;
+    padding: .3rem 1rem;
+    border-radius: .3rem;
 }

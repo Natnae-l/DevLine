@@ -19,17 +19,17 @@ function connectNamespace(event){
         console.log(data)
         room(data)
     })
+    return;
 }
 
 
 function room(data){
-    document.querySelector('.room').innerHTML = '';
+    document.querySelector('.inner-room').innerHTML = '';
     const ul = document.createElement('ul');
     
-
     data.forEach(item => {
-        ul.innerHTML += `<li><img src="/images/room.png" style="width: 22px;"></li>`
+        ul.innerHTML += `<li><img src="/images/room.png" style="width: 22px;">${item.roomTitle}</li>`
     })
-    document.querySelector('.room').append(ul);
+    document.querySelector('.inner-room').append(ul);
     return;
 }
