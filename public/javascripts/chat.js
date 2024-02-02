@@ -11,8 +11,9 @@ function name(data){
     })
 }
 
+let ns;
 function connectNamespace(event){
-    let ns = event.target.getAttribute('ns');
+    ns = event.target.getAttribute('ns');
     ns = io(`http://localhost:3000/${ns}`);
 
     ns.on('data', (data) => {
@@ -28,8 +29,20 @@ function room(data){
     const ul = document.createElement('ul');
     
     data.forEach(item => {
-        ul.innerHTML += `<li><img src="/images/room.png" style="width: 22px;">${item.roomTitle}</li>`
+        ul.innerHTML += `<li class='rooms'><img src="/images/room.png" style="width: 22px;">${item.roomTitle}</li>`
     })
     document.querySelector('.inner-room').append(ul);
+
+    Array.from(document.querySelectorAll('.rooms')).forEach(item => {
+        item.addEventListener('click', joinRoom)
+    })
     return;
+}
+
+function joinRoom(event){
+    let roomName = event.target.textContent
+    console.log(roomName)
+    ns.emit('room', roomName, (newNumberOfUsers) => {
+        document.querySelector('.users').innerHTML = newNumberOfUsers
+    })
 }

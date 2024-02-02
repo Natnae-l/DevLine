@@ -43,11 +43,21 @@ io.on('connection', (socket) => {
 //     history: []
 //   }
 
+
 // listen for each namespace connection
 namespaces.forEach(namespace => {
     io.of(`/${namespace.nsTitle}`).on('connection', (socket) => {
         let roomData = namespaces.find(data => namespace.nsTitle == data.nsTitle)
         socket.emit('data', roomData.rooms)
+        socket.on('room', (jRoom, cb) => {
+
+            socket.join(jRoom)
+            // console.log(socket.adapter.nsp.name)
+            let set = io.of(socket.adapter.nsp.name).in(jRoom).allSockets().then(data => {
+                cb(data.size)
+            });
+
+        })
     })
 })
 
