@@ -17,8 +17,12 @@ function connectNamespace(event){
     ns = io(`http://localhost:3000/${ns}`);
 
     ns.on('data', (data) => {
-        console.log(data)
+ 
         room(data)
+    })
+    ns.on('message', message => {
+       let ul = document.querySelector('.board');
+       ul.innerHTML += `<li>${message}</li>`
     })
     return;
 }
@@ -40,9 +44,22 @@ function room(data){
 }
 
 function joinRoom(event){
-    let roomName = event.target.textContent
-    console.log(roomName)
+    let roomName = event.target.textContent;
+    document.querySelector('.board').innerHTML = ''
     ns.emit('room', roomName, (newNumberOfUsers) => {
         document.querySelector('.users').innerHTML = newNumberOfUsers
     })
+    ns.on('history', history => {
+        console.log(history)
+        let ul = document.querySelector('.board');
+        console.log('message')
+        history.forEach(item => ul.innerHTML += `<li>${item}</li>`)
+    })
 }
+
+document.querySelector('.send-message').addEventListener('submit', (e) => {
+    e.preventDefault();
+    let text = document.querySelector('.text').value;
+
+    ns.emit('message', text);
+})
